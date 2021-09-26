@@ -44,8 +44,8 @@ terraform plan -out consul.tfplan
 terraform apply consul.tfplan
 
 # Get token values for Mary and Sally and record them for later
-consul acl token read -id ACCESSOR_ID_MARY
-consul acl token read -id ACCESSOR_ID_SALLY
+consul acl token read -id ${ACCESSOR_ID_MARY}
+consul acl token read -id ${ACCESSOR_ID_SALLY
 
 # Go back to the main m4 folder
 cd ..

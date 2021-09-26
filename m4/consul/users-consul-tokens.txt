@@ -1,0 +1,20 @@
+mary_token_accessor_id = "54e431e5-1b8b-9ea7-59dd-7fd2e619a94a"
+sally_token_accessor_id = "eda0e128-97a0-4b1a-b8fd-f97977100c08"
+
+
+consul acl token read -id ${ACCESSOR_ID_SALLY}
+AccessorID:       54e431e5-1b8b-9ea7-59dd-7fd2e619a94a
+SecretID:         596f5f1b-0ee2-93d4-217b-fcda1c099286
+Description:      token for Mary Moe
+Local:            false
+Create Time:      2021-09-19 11:11:05.739289 +0100 BST
+Policies:
+   04a75bec-ec32-0441-3076-0cb3ea84c5f9 - networking
+
+AccessorID:       eda0e128-97a0-4b1a-b8fd-f97977100c08
+SecretID:         26979915-ba64-bf86-513d-af0bc7d149cb
+Description:      token for Sally Sue
+Local:            false
+Create Time:      2021-09-19 11:11:05.739283 +0100 BST
+Policies:
+   354f2bad-811c-1256-322a-b8f4c68a551b - applications

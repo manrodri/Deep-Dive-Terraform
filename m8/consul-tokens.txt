@@ -1,0 +1,19 @@
+networking token
+
+AccessorID:       4a331540-8a37-a131-8794-8f275c65a73e
+SecretID:         cbaf8060-7090-0b69-53fe-85134495d856
+Description:      Jenkins networking
+Local:            false
+Create Time:      2021-09-26 08:33:38.329086 +0100 BST
+Policies:
+   04a75bec-ec32-0441-3076-0cb3ea84c5f9 - networking
+
+Applications token
+
+AccessorID:       e9ec055f-7b9b-c5ea-1ab0-3cd0802d8ef9
+SecretID:         758fed82-346d-cf07-b618-263acb4a65e3
+Description:      Jenkins applications
+Local:            false
+Create Time:      2021-09-26 08:34:18.957155 +0100 BST
+Policies:
+   354f2bad-811c-1256-322a-b8f4c68a551b - applications
