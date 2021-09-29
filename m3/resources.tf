@@ -38,7 +38,7 @@ module "vpc" {
   name = "globo-primary"
 
   cidr            = var.cidr_block
-  azs             = slice(data.aws_availability_zones.available.names, 0, var.subnet_count)
+  azs             = slice(data.aws_availability_zones.available.names, 0, var.subnet_count) // slice extracts some consecutive elements from within a list. slice(list, startindex, endindex)
   private_subnets = var.private_subnets
   public_subnets  = var.public_subnets
 

@@ -50,6 +50,32 @@ resource "consul_keys" "applications" {
   }
 }
 
+resource "consul_keys" "learning-state" {
+  key {
+    path  = "learningState/networking/configuration"
+    value = ""
+  }
+
+  key {
+    path  = "learningState/networking/state"
+    value = ""
+  }
+}
+
+resource "consul_acl_policy" "learningStateNetworking" {
+  name  = "learningConsulNetworking"
+  rules = <<-RULE
+    key_prefix "learningState/networking" {
+      policy = "write"
+    }
+
+    session_prefix "" {
+      policy = "write"
+    }
+    RULE
+}
+
+
 resource "consul_acl_policy" "networking" {
   name  = "networking"
   rules = <<-RULE
@@ -83,7 +109,7 @@ resource "consul_acl_policy" "applications" {
 
 resource "consul_acl_token" "mary" {
   description = "token for Mary Moe"
-  policies    = [consul_acl_policy.networking.name]
+  policies    = [consul_acl_policy.networking.name, consul_acl_policy.learningStateNetworking.name]
 }
 
 resource "consul_acl_token" "sally" {

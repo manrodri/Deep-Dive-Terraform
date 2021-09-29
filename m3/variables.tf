@@ -3,7 +3,7 @@
 ##################################################################################
 
 variable "region" {
-  default = "us-east-1"
+  default = "eu-west-1"
 }
 
 variable "subnet_count" {
@@ -21,4 +21,6 @@ variable "private_subnets" {
 variable "public_subnets" {
   type = list(any)
 }
+
+
 
